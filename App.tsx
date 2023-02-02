@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import NativeModule from './tm/NativeModule';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -41,6 +42,10 @@ function Section({children, title}: SectionProps): JSX.Element {
           },
         ]}>
         {title}
+      </Text>
+      <Text>
+        Test Deneme
+        {NativeModule.reverseString("Test asd")}
       </Text>
       <Text
         style={[

@@ -89,6 +89,12 @@ def reactNativeArchitectures() {
 }
 
 android {
+    externalNativeBuild {
+       cmake {
+           path "src/main/jni/CMakeLists.txt"
+       }
+    }
+
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
